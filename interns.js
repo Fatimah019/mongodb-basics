@@ -1,16 +1,24 @@
-var mongoClient=require('mongodb').MongoClient;
-var url="mongodb://localhost:27017/";
-var fs=require('fs');
+const mongoClient=require('mongodb').MongoClient;
+const url="mongodb://localhost:27017/";
+const fs=require('fs');
+
 
 //connect to database
 mongoClient.connect(url, (err, db)=>{
     if (err) throw err;
     var dbCol=db.db("Omowonuola");
+    //create collection
+        const movieCollection=[{movie:"The Banker", year:"2020", rating:8},
+            {movie:"Bad Boys", year:"2020", rating:7},
+            {movie:"The Hunt Year", year:"2020", rating:7},
+            {movie:"Bloodshot", year:"2020", rating:7.5},
+            {movie:"First Cow", year:"2020", rating:6.5}];
 
-    //create a collection(table)
-    dbCol.createCollection("Interns", (err, result)=>{
-        if (err) throw err;
-        console.log("Interns Collection Created");
-        db.close();
+            dbCol.collection('myMovies').insertMany(movieCollection, (err, res)=>{
+                if (err) throw err;
+                console.log(movieCollection);
+                db.close();
+            })
+       
+      
     });
-});
