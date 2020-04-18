@@ -4,7 +4,7 @@ const url="mongodb://localhost:27017/";
 //connect to database
 mongoClient.connect(url, (err, db)=>{
     if (err) throw err;
-    var dbCol=db.db("Omowonuola");
+    var dbCol=db.db("myMoviesCollection");
     //create collection
         const movieCollection=[{movie:"The Banker", year:"2020", rating:8},
             {movie:"Bad Boys", year:"2020", rating:7},
@@ -17,6 +17,5 @@ mongoClient.connect(url, (err, db)=>{
                 console.log(movieCollection);
                 db.close();
             })
-       
       
     });

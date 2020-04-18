@@ -9,7 +9,8 @@ mongoClient.connect(url, (err, db)=>{
     var dbCol=db.db("Omowonuola");
     //create collection
 
-        dbCol.collection('myMovies').updateOne({movie:"The Banker"}, {$set: {movie:"Miracle in cell n0.7", year:"2019", rating:9}}, function(err, result){
+        dbCol.collection('myMovies').updateOne({movie:"The Banker"}, 
+        {$set: {movie:"Miracle in cell n0.7", year:"2019", rating:9}}, function(err, result){
             if (err) throw err;
             console.log(result);
             db.close();
