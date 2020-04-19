@@ -17,5 +17,10 @@ mongoClient.connect(url, (err, db)=>{
             console.log(res);
             db.close();
         });
+        dbCol.collection('myMovies').findOne({}, function(err, result){
+            if(err) throw err;
+            console.log(result);
+            db.close();
+        });
 
     });

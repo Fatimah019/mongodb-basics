@@ -1,7 +1,6 @@
 const mongoClient=require('mongodb').MongoClient;
 const url="mongodb://localhost:27017/";
 
-
 //connect to database
 mongoClient.connect(url, (err, db)=>{
     if (err) throw err;
