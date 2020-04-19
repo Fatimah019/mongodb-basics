@@ -1,10 +1,10 @@
-# crud-basics
+# CRUD-BASICS
 
-SCREENSHOT OF THE .EXE FILES (MONGO AND MONGOD) :
+SCREENSHOT OF CRUD OPERATION IN MONGODB WITH NODE.JS :
 
-![collection file](https://raw.github.com/Fatimah019/mongodb-basics/tree/crud-basics/images/movieCollection.png)
+![collection file](https://raw.github.com/Fatimah019/mongodb-basics/tree/master/images/movieCollection.png)
 
 SCREENSHOT OF THE .EXE FILES (MOVIE QUERIES) :
 
-![query file](https://raw.github.com/Fatimah019/mongodb-basics/trees/crud-basics/images/movieCollection.png)
+![query file](https://raw.github.com/Fatimah019/mongodb-basics/trees/master/images/movieQueries.png) 
 
